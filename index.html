@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+
+
+<!-- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> -->
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!--/worldwide/vehicles/seltos.do-->
+<head>
+	<title>Kia Seltos | The Bold SUV | Kia Motors Worldwide</title>
+
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Expires" content="-1" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Cache-Control" content="No-Cache" />
+	<meta http-equiv="imagetoolbar" content="no" />
+	<meta itemprop="name" content="Kia Seltos | The Bold SUV | Kia Motors Worldwide" />
+	<meta itemprop="description" content="Kia Seltos- No matter what comes next." />
+	<meta property="og:title" content="Kia Seltos | The Bold SUV | Kia Motors Worldwide" />
+	<meta property="og:description" content="Kia Seltos- No matter what comes next." />
+	<meta property="og:site" content="http://stage.kia.com/worldwide/vehicles/seltos.do" />
+	<meta property="og:image" content="" />
+	<meta name="twitter:title" value="#Kia Seltos | The Bold SUV | Kia Motors Worldwide">
+	<meta name="twitter:description" value="#Kia Seltos- No matter what comes next.">
+	<meta name="description" content="Kia Seltos- No matter what comes next." />
+	<meta name="keywords" content="Kia Seltos, kia, kia cars, Kia Motors, kia SUV, Seltos image, Seltos gallery, Seltos exterior, Seltos interior" />
+	<meta name="WT.ti" content="Main" />
+	<meta name="kia_metrics_pagename" content="showroom|seltos" />
+	
+	<link rel="canonical" href="http://stage.kia.com/worldwide/vehicles/seltos.do" />
+    <link rel="alternate" media="only screen and (max-width: 640px)"  href="https://m.kia.com//worldwide/vehicles/seltos.do">
+    
+	<link rel="stylesheet" type="text/css" href="https://www.kia.com/worldwide/css/common.css" media="all" />
+	<script type="text/javascript" src="https://www.kia.com/worldwide/js/ajax/common.js"></script>
+	<script type="text/javascript" src="https://www.kia.com/worldwide/js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="https://www.kia.com/worldwide/js/library.min.js"></script>
+	<script type="text/javascript" src="https://www.kia.com/worldwide/js/doTimeout.js"></script>
+	<script type="text/javascript" src="https://www.kia.com/worldwide/js/common.js"></script>
+	<script type="text/javascript" src="https://www.kia.com/worldwide/js/jcarousellite_1.0.1.min.js"></script>
+	
+	<script type="text/javascript" src="https://www.kia.com/worldwide/js/kikswipe.js"></script>
+	<script type="text/javascript" src="https://www.kia.com/worldwide/js/boxlayout.js"></script>
+	<script type="text/javascript" src="https://www.kia.com/worldwide/js/main.js"></script>
+	
+	<script type="text/javascript" src="https://www.kia.com/worldwide/js/TweenMax.min.js"></script>
+	<script type="text/javascript" src="https://www.kia.com/worldwide/js/jquery-ui-1.10.3.custom.js"></script>
+	<script type="text/javascript" src="https://www.kia.com/worldwide/js/rwd_imagemap.js"></script>
+	<script type="text/javascript" src="https://www.kia.com/worldwide/js/select.js"></script>
+	<script type="text/javascript" src="https://www.kia.com/worldwide/js/jQueryRotate.js"></script>
+	<script type="text/javascript">
+		var dtmDataLayer = {
+			'page_name' : 'showroom|seltos',
+			'vehicle_name' : 'seltos',
+			'vehicle_type' : 'suv&mpv',
+			'search_keyword' : '',
+			'download_name' : '',
+			'find_country_name' : '',
+			'internal_link' : '',
+			'scrolled_section' : '',
+			'external_link' : '',
+			'share_kia_search_terms' : '',
+			'share_kia_no_search_terms' : '',
+			'page_section_viewed' : '',
+			'page_section_name' : ''
+		};
+		
+		var languageOfUri = 'null';
+		{
+			/**
+			 * Layout 초기화
+			 */
+			$(window).load(function() {
+		
+				try {
+					jQuery(window).bind("unload", function() {});//Trick
+				} catch (ignore) {
+				}
+		
+				try {
+					initTop();
+				} catch (ignore) {
+				}
+		
+				try {
+					initLeft();
+				} catch (ignore) {
+				}
+				
+				try {
+					initBottom();
+				} catch (ignore) {
+				}
+		
+				try {
+					//모든 form 에 autocomplete off 속성 추가
+					var elements = document.getElementsByTagName("mainForm");
+					for (var i = 0; i < elements.length; i++) {
+						elements[i].setAttribute("autocomplete", "off");//Works in IE, Firefox <form autocomplete="off">
+						//alert(elements[i].name + '.autocomplete=' elements[i].getAttribute("autocomplete"));
+					}
+		
+					//모든 input type="password" 페이지 로드시 자동입력 문자 삭제 (브라우저 캐쉬)
+					var elements = document.getElementsByTagName("input");
+					for (var i = 0; i < elements.length; i++) {
+						if (elements[i].type=="password") {
+							elements[i].value = '';
+							//alert(elements[i].name);
+						}
+					}
+
+					initMain();
+					initGNBCaller();
+
+				} catch (ignore) {
+				}
+				
+				//구글 통계 수집
+				try {
+					(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+						(i[r].q=i[r].q||[]).push(arguments);},i[r].l=1*new Date();a=s.createElement(o),
+						m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+						})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+					
+						ga('create', 'UA-37291132-3', 'auto');
+						ga('send', 'pageview');
+				} catch (ignore) {}
+			});
+		}
+
+		jQuery(function($){
+			$(document).on('change',".file_input_hidden",function(){
+				$(this).prev("span").html($(this).val());
+			});
+			$(document).on('focusin',".file_input_hidden",function(){
+				$(this).parent(".file_input_div").addClass("on");
+			});
+			$(document).on('focusout',".file_input_hidden",function(){
+				$(this).parent(".file_input_div").removeClass("on");
+			});    
+		
+		});
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+
+		//var dataLayer = [];
+		function analyticsGoogle(path) {
+			try{
+				var pageTracker = _gat._getTracker("UA-37291132-3");
+				pageTracker._trackPageview('/' + path + '/');
+			}catch(e){}
+		}
+	</script>
+
+
+	<!-- <script src="//assets.adobedtm.com/24e76ab8fc605d575172ed593e3da587e23b5b9c/satelliteLib-652adfc27f2586eecc1b6a170d549c2833f82109-staging.js"></script> -->
+
+	
+	<script type="text/javascript"> 
+		$(document).ready(function() {
+			ajaxList1('https://www.kia.com/worldwide/socialKiaNewsListA.dojax', 1, 'NewsList');
+			
+			$(function() {
+				if($("#info_detail ul.list_info").find("li").size() >= 3){
+					$("#info_detail").jCarouselLite({
+						btnNext: ".interior .btn_next",
+						btnPrev: ".interior .btn_prev",
+						scroll: 1,
+						speed: 1000,
+						visible: 3
+					});
+				}
+				if($("#info_detail2 ul.list_info").find("li").size() >= 3){
+					$("#info_detail2").jCarouselLite({
+						btnNext: ".performance .btn_next",
+						btnPrev: ".performance .btn_prev",
+						scroll: 1,
+						speed: 1000,
+						visible: 3
+					});
+				}
+				if($("#info_detail3 ul.list_info").find("li").size() >= 3){
+					$("#info_detail3").jCarouselLite({
+						btnNext: ".safety .btn_next",
+						btnPrev: ".safety .btn_prev",
+						scroll: 1,
+						speed: 1000,
+						visible: 3
+					});
+				}
+				if($("#info_detail4 ul.list_info").find("li").size() >= 3){
+					$("#info_detail4").jCarouselLite({
+						btnNext: ".visual .btn_next",
+						btnPrev: ".visual .btn_prev",
+						scroll: 1,
+						speed: 1000,
+						visible: 3
+					});
+				}
+				
+				var $slider_contain = $(".slider_contain");
+				$slider_contain.each(function(index) {
+					var count = index + 1;
+					$slider_contain.eq(index).attr("id","sell0"+count);
+					var s = new McSlider({ selector : "#sell0"+count, motion : "slider", autostart : false});
+					$slider_contain.eq(index).data("mcSlider",s); 
+				});
+			});
+			
+			// Adobe Analytics 페이지 구동용
+			if(typeof _satellite != 'undefined') _satellite.pageBottom();
+		});
+		
+		$(document).ready(function() {
+			// 메뉴 하이라이트 기능
+			$(".drop_menu a").each(function(i){
+				if($(this).attr("href") == "/worldwide/vehicles/seltos.do")
+				{
+					$(this).parents("li").addClass("over");
+				}
+			});
+		});
+	</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MS9CPF9');</script>
+<!-- End Google Tag Manager -->
+
+
+</head>
+
+
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MS9CPF9"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+
+<div id="wrap">
+	
+
+
+
+    <script type="text/javascript">
+        
+        var imageRoot = '/worldwide/images';
+    </script>
+    <script type="text/javascript">
+        /*******************************
+         * ajax ###
+         *******************************/
+         var initRegion = false;
+         var initCountry = false;
+         function ajaxHeaderSearch(ajaxUrl, form, footer) {
+             $.ajax({
+                 type: 'post'
+                 , async: true
+                 , url: ajaxUrl
+                 , data: $("#"+form).serialize() 
+                 , beforeSend: function() {
+                     //displayWaitOn();
+                 }
+                 , success: function(ajaxData, textStatus, request) {
+                     /**
+                      * Common Ajax Error Check
+                      */
+                     if (isAjaxError(ajaxData, textStatus, request)) { //@see common.js
+                         callbackAjaxError(ajaxData, textStatus, request);
+                         //기타 공통 오류 처리 후 처리할 것들 아래 넣으세요
+                         return;
+                     }
+                     ajaxData = getHtmlOrJsonData(ajaxData);
+
+
+                     /**
+                      * 처리 - start
+                      */
+                     if((typeof ajaxData.selectCsF010RegionList) != 'undefined'){
+                        if(form=='headerForm'){
+                            $.each($("#findKia #find_maps area"), function(){
+                                if(!initRegion && this.alt == 'Asia') {
+                                    console.log("load region : " + this.alt);
+                                    if((typeof setRegion) === 'function') setRegion(this.alt);
+                                    this.click();
+                                    initRegion = true;
+                                }
+                            });
+                        } else {
+                            $.each(ajaxData.selectCsF010RegionList, function(){
+                                $("#REGION2").append("<option value='"+this.REGION+"'>"+this.REGION+"</option>");
+                            });
+                            $("#REGION2").resetSS();
+                            $("#COUNTRY2").resetSS();
+                        }
+                    }else if((typeof ajaxData.selectCsF010CountryList) != 'undefined'){
+                        if(form=='headerForm'){
+                            $(".layer_findkia .findList ul li").remove();
+                            
+                            $.each(ajaxData.selectCsF010CountryList, function(){
+                                $(".layer_findkia .findList ul").append(
+                                    "<li><a href='#" + this.SEQ + "' data-src='/worldwide/images/find_kia/country/" + this.COUNTRY.replaceAll(" ", "_") + ".jpg' onclick='loadCleckContacUs(this);'><div>" +
+                                    "   <img src='/worldwide/images/find_kia/country/" + this.COUNTRY.replaceAll(" ", "_") + ".jpg' alt='" + this.COUNTRY + "' />" +
+                                    "   <span>" + this.COUNTRY + "</span>" +
+                                    "</div></a></li>");
+                                
+                                if(!initCountry && this.SEQ == '64') {
+                                    $(".layer_findkia input#COUNTRY")[0].value = 64;
+                                    ajaxHeaderSearch('/worldwide/cu/cuF010ContactUsList.dojax', 'headerForm');
+                                    //initCountry = true;
+                                }
+                            });
+                            $("#COUNTRY").resetSS();
+                            
+                        }else{
+                            $("#COUNTRY2").find('option').each(function(i) { if(i>0){ $(this).remove(); } });
+                            $.each(ajaxData.selectCsF010CountryList, function(){
+                                $("#COUNTRY2").append("<option value='"+this.SEQ+"'>"+this.COUNTRY+"</option>");
+                            });
+                            $("#COUNTRY2").resetSS();
+                         }
+                     }else if((typeof ajaxData.selectCsF010ContactUsList) != 'undefined'){
+                        contactUsInfoStr = "";
+                        
+                        if(form=='headerForm'){
+                            $.each(ajaxData.selectCsF010ContactUsList, function(){
+                                var obj = $(".findList").prev(".find_map").find(".findTxt");
+                                selectedCountry = this.COUNTRY;
+                                console.log("load country : " + selectedCountry);
+                                if((typeof setCountry) === 'function') setCountry(this.COUNTRY);
+                                
+                                $(obj).find(".tits").children("div").children("strong").html(this.COUNTRY);
+                                $(obj).find(".tits").children("div").children("img").attr("alt", this.COUNTRY);
+                                $(obj).find(".tits").children("div").children("img").attr("src", "/worldwide/images/find_kia/country/" + this.COUNTRY.replaceAll(" ", "_") + ".jpg");
+                                
+                                if(this.WEBSITE_YN=='N'){
+                                    $(obj).find(".add").show();
+                                    $(obj).find(".tel").show();
+                                    
+                                    if(this.SALE_PERSON_EMAIL == null || this.SALE_PERSON_EMAIL == '')
+                                        $(obj).find(".email").hide();
+                                    else $(obj).find(".email").show();
+                                    
+                                    $(obj).find(".url").hide();
+
+                                    $(obj).find(".add").find("p").html(this.OFFICE_ADDRESS);
+                                    $(obj).find(".tel").find("p").html(this.TELEPHONE);
+                                    $(obj).find(".email").find("p").html(this.SALE_PERSON_EMAIL);
+                                }else{
+                                    $(obj).find(".add").hide();
+                                    $(obj).find(".tel").hide();
+                                    $(obj).find(".email").hide();
+                                    $(obj).find(".url").show();
+
+                                    $(obj).find(".url").find("p").find("a").html(this.WEBSITE.replace("http://","").replace("https://",""));
+                                    $(obj).find(".url").find("p").find("a").attr("href", this.WEBSITE);
+                                    if(initCountry)
+                                        window.open(this.WEBSITE);
+                                }
+                                initCountry = true;
+                            });
+                        }else{
+                            contactUsInfoStr  = "<div id='contactusinfowin' class='info_branch'>";
+                            contactUsInfoStr += "<div class='txt_address'>";
+                            contactUsInfoStr += "<div class='inner'>";
+                            $.each(ajaxData.selectCsF010ContactUsList, function(){
+                                if(this.WEBSITE_YN=='Y'){
+                                    contactUsInfoStr += "<strong>URL</strong>";
+                                    contactUsInfoStr += "<a href='"+this.WEBSITE+"' target='_blank' id='contactUsInfo' class='link_branch' onclick=\"clickCountryURL('main');\">"+this.WEBSITE+"</a>";
+                                    if(footer!='footer'){
+                                        contactUsInfoStr += "<a href='#none' onClick=\"$('#contactusinfowin').hide();\" class='btn_close2'></a>";
+                                    }
+                                }else{
+                                    contactUsInfoStr += "<strong>Office Address</strong>";
+                                    contactUsInfoStr += "<p>"+this.OFFICE_ADDRESS+"</p>";
+                                    contactUsInfoStr += "<strong class='tel'>TEL</strong>";
+                                    contactUsInfoStr += "<p>"+this.TELEPHONE+"</p>";
+                                    
+                                    if(this.SALE_PERSON_EMAIL != null && this.SALE_PERSON_EMAIL != '') {
+                                        contactUsInfoStr += "<strong class='email'>E-mail</strong>";
+                                        contactUsInfoStr += "<p>"+this.SALE_PERSON_EMAIL+"</p>";
+                                    }
+                                    
+                                    if(footer!='footer'){
+                                        contactUsInfoStr += "<a href='#none' onClick=\"$('#contactusinfowin').hide();\" class='btn_close2'></a>";
+                                    }
+                                }
+                            });
+                            contactUsInfoStr += "</div>";
+                            contactUsInfoStr += "</div>";
+                            contactUsInfoStr += "</div>";
+                            $("#contactUsInfo2").html(contactUsInfoStr);
+                         }
+                     }
+                     /**
+                      * 처리 - end
+                      */
+                 }
+                 , error: function(data, status, err) {
+                     callbackAjaxError(data, status, err);
+                 }
+                 , complete: function() { 
+                     //displayWaitOff();
+                 }
+             });
+         }
+        /*******************************
+         * valid ### (Check)
+         *******************************/
+ 
+        
+        /*******************************
+         * general Javascript (do+name)
+         *******************************/
+        function blockMenu() {
+            alert('준비중 입니다.');
+        }
+        
+        /*******************************
+         * click ### Button, Link
+         *******************************/
+         function loadSelectRegion(form) {
+             ajaxHeaderSearch('/worldwide/cu/cuF010RegionList.dojax', form);
+         }
+        
+        // Regin Change Selected
+        function loadSelectCountry(form) {
+            var selectedCountry = '';
+            if(form=='headerForm'){
+                selectedCountry = $("#COUNTRY option:selected").text();
+                if(selectedCountry!='Select Country' && selectedCountry!='Select Region'){
+                    dtmDataLayer.find_country_name = selectedCountry.toLowerCase();
+                    console.log("SelectCountry header : " + dtmDataLayer.find_country_name);
+                }
+            }else if(form=='findKiaForm'){
+                selectedCountry = $("#COUNTRY2 option:selected").text();
+                if(selectedCountry!='Select Country' && selectedCountry!='Select Region'){
+                    dtmDataLayer.find_country_name = selectedCountry.toLowerCase();
+                    //if(typeof _satellite != 'undefined') _satellite.track('find_country_name');
+                    //if(initFindKiaForm) analyticsGoogle('find/' + selectedCountry);
+                    console.log("SelectCountry bottom : " + dtmDataLayer.find_country_name);
+                }
+            }
+            ajaxHeaderSearch('/worldwide/cu/cuF010CountryList.dojax',form);
+        }
+        
+        // Country Change Selected
+        var selectedCountry = '';
+        function loadSelectContacUs(form, footer) {
+            selectedCountry = '';
+            if(form=='headerForm'){
+                
+                selectedCountry = $("#COUNTRY option:selected").text();
+                if(selectedCountry!='Select Country' && selectedCountry!='Select Region'){
+                    dtmDataLayer.find_country_name = selectedCountry.toLowerCase();
+                    
+                    if(typeof _satellite != 'undefined') _satellite.track('find_country_gnb');
+                    analyticsGoogle('find/' + selectedCountry);
+                    console.log("ContacUs header : " + dtmDataLayer.find_country_name);
+                    initHeaderForm = true;
+                }
+            }else if(form=='findKiaForm'){
+                selectedCountry = $("#COUNTRY2 option:selected").text();
+                if(selectedCountry!='Select Country' && selectedCountry!='Select Region'){
+                    dtmDataLayer.find_country_name = selectedCountry.toLowerCase();
+                    
+                    if(typeof _satellite != 'undefined') _satellite.track('find_country_name');
+                    analyticsGoogle('find/' + selectedCountry);
+                    console.log("ContacUs bottom : " + dtmDataLayer.find_country_name);
+                    initFindKiaForm = true;
+                }
+            }
+            ajaxHeaderSearch('/worldwide/cu/cuF010ContactUsList.dojax', form, footer);
+        }
+        
+        // Country Change Selected (header)
+        function loadCleckContacUs(obj)
+        {
+            selectedCountry = $(obj).children("div").children("span").text();
+            dtmDataLayer.find_country_name = selectedCountry.toLowerCase();
+            $(".layer_findkia input#COUNTRY")[0].value = $(obj).attr("href").replace("#", "");
+            
+            if(typeof _satellite != 'undefined') _satellite.track('find_country_gnb');
+            analyticsGoogle('find/' + selectedCountry);
+            
+            console.log("ContacUs header : " + dtmDataLayer.find_country_name);
+            ajaxHeaderSearch('/worldwide/cu/cuF010ContactUsList.dojax', 'headerForm');
+        }
+
+        function clickContactUs(form) {
+            submitForm('/worldwide/cu/cuF010Contact.do', $("#"+form));
+        }
+         
+        function PopupContactUs() {
+            analyticsGoogle('ContactUs');
+            window.open("http://ddms.kia.com/vocm.jsp","pop","width=780,height=1000,top=0,left=0,scrollbars=no,resizeable=no,menubar=no,toolbar=no");
+        }
+        
+        function clickIpadAppButton(carname){
+             url = "";
+             if(carname=='Picanto'){
+                 dtmDataLayer.download_name = "";
+                 //url = "https://itunes.apple.com/gb/app/kia-picanto/id456868269?mt=8";
+                 url = "https://play.google.com/store/apps/details?id=com.jns.kiavr2017ja&hl=en";
+             }else if(carname=='All-New Picanto'){
+                 dtmDataLayer.download_name = "";
+                 url = "https://play.google.com/store/apps/details?id=com.jns.kiavr2017ja&hl=en";
+             }else if(carname=='Rio 4-Door'){
+                 dtmDataLayer.download_name = "";
+                 url = "";
+             }else if(carname=='Rio 5-Door'){
+                 dtmDataLayer.download_name = "";
+                 url = "https://itunes.apple.com/gb/app/kia-rio/id482817969?mt=8";
+             }else if(carname=='Cerato/Forte'){
+                 dtmDataLayer.download_name = "";
+                 url = "https://itunes.apple.com/gb/app/kia-cerato/id590204485?mt=8";
+             }else if(carname=='Cerato/Forte 5-Door'){
+                 dtmDataLayer.download_name = "";
+                 url = "";
+             }else if(carname=='Cerato Koup'){
+                 dtmDataLayer.download_name = "";
+                 url = "";
+             }else if(carname=='Optima' || carname=='ALL-NEW-OPTIMA'){
+                 dtmDataLayer.download_name = "";
+                 url = "https://itunes.apple.com/gb/app/kia-optima/id552366501?mt=8";
+             }else if(carname=='Optima Hybrid'){
+                 dtmDataLayer.download_name = "";
+                 url = "";
+             }else if(carname=='Cadenza' || carname=='All-New-CADENZA'){
+                 dtmDataLayer.download_name = "";
+                 url = "https://itunes.apple.com/gb/app/kia-cadenza/id691754739?mt=8";
+             }else if(carname=='Kia Quoris'){
+                 dtmDataLayer.download_name = "";
+                 url = "https://itunes.apple.com/gb/app/kia-quoris/id576762741?mt=8";
+             }else if(carname=='Soul'){
+                 dtmDataLayer.download_name = "";
+                 url = "https://itunes.apple.com/gb/app/kia-soul/id807996011?mt=8";
+             }else if(carname=='Soul EV'){
+                 dtmDataLayer.download_name = "";
+                 url = "https://itunes.apple.com/gb/app/kia-soul-ev/id898159353?mt=8";
+             }else if(carname=='Carens'){
+                 dtmDataLayer.download_name = "";
+                 url = "https://itunes.apple.com/gb/app/kia-carens/id631065861?mt=8";
+             }else if(carname=='Carnival'){
+                 dtmDataLayer.download_name = "";
+                 url = "";
+             }else if(carname=='Sportage' || carname=='All-New-sportage'){
+                 dtmDataLayer.download_name = "";
+                 url = "https://itunes.apple.com/gb/app/kia-sportage/id1088569528?mt=8";
+             }else if(carname=='Sorento'){
+                 dtmDataLayer.download_name = "";
+                 url = "https://itunes.apple.com/gb/app/the-new-sorento/id958849054?mt=8";
+             }else if(carname=='Quoris' || carname=='k900'){
+                 dtmDataLayer.download_name = "";
+                 url = "https://itunes.apple.com/gb/app/kia-quoris/id576762741?mt=8";
+             }else if(carname=='Mohave'){
+                 dtmDataLayer.download_name = "";
+                 url = "";
+             }else if(carname=='Niro'){
+                 dtmDataLayer.download_name = "";
+                 url = "https://itunes.apple.com/gb/app/kia-niro/id1147993940?mt=8";
+             }
+
+             if(url != ""){
+                 if(dtmDataLayer.download_name == "")
+                     dtmDataLayer.download_name = dtmDataLayer.vehicle_name;
+                 if(typeof _satellite != 'undefined') _satellite.track('app_download');
+                 window.open(url,"ipad_app","width=1024, height=768, resizable=yes");
+             }
+             return;
+         }
+        
+        function clickCatalogueButton(catalogue_name){
+            url = "/worldwide/vehicles/catalogue/"+catalogue_name;
+            dtmDataLayer.download_name = dtmDataLayer.vehicle_name;
+            if(typeof _satellite != 'undefined') _satellite.track('brochure_download');
+            window.open(url,"","width=1024, height=768, resizable=yes");
+            return;
+        }
+        
+        function clickMeetShareKia(vType){
+            var f = document.meetShareKia;
+            dtmDataLayer.internal_link = "promotion|showroom|" + vType.toLowerCase() + "|share kia";
+            if(typeof _satellite != 'undefined') _satellite.track('internal_link');
+            f.VEHICLES.value = vType;
+            f.action = '/worldwide/share_kia.do';
+            f.submit();
+        }
+        
+        function clickPromo(src, target, url) {
+            dtmDataLayer.internal_link = "promotion|" + src + "|" + target;
+            if(typeof _satellite != 'undefined') _satellite.track('internal_link');
+        }
+        
+        function clickFileDownloadButton(url, kind) {
+            dtmDataLayer.download_name=kind;
+            if(typeof _satellite != 'undefined') _satellite.track('brochure_download');
+            document.getElementById('downloadFrame').src = url;
+        };
+        
+        function clickCountryURL(position) {
+            dtmDataLayer.find_country_name = selectedCountry.toLowerCase();
+            
+            if(typeof _satellite != 'undefined')
+            {
+                if(position=='main')
+                    _satellite.track('local_url_clicks_showroom');
+                else if (position=='gnb')
+                    _satellite.track('local_url_clicks_gnb');
+                
+                _satellite.track('local_link_' + position); // main or gnb
+            }
+        }
+
+         /*******************************
+          * GNB Caller Init
+          *******************************/
+         //function initGNBCaller() {
+             // GNB Load Select Region Data
+             var initHeaderForm = false;
+             var initFindKiaForm = false;
+             $(document).ready(function() {
+                loadSelectRegion('headerForm');
+                loadSelectRegion('findKiaForm');
+                
+                //ajaxList('socialKiaNewsList.dojax',1,'NewsList');
+                
+                $('#container a').click(function() {
+                    //if(document.documentURI.indexOf('/all-new-soul') == -1)
+                    if(dtmDataLayer.vehicle_name != "")
+                    {
+                        var linkType = "";
+                        if($(this).attr('data-src') != null && $(this).attr('data-src') != "")
+                        {
+                            var ext = $(this).attr('data-src').split('.')[$(this).attr('data-src').split('.').length-1];
+                            if(ext == "jpg" || ext == "gif" || ext == "png") linkType = "photo view";
+                            if($(this).attr('data-src').indexOf('youtube') != -1) linkType = "video view";
+                        }
+                        else if($(this).attr('href') == '#' && $(this).text().indexOf('btn') != -1) linkType = "photo view";
+                        else if($(this).attr('data-slide-index') != null && $(this).attr('data-slide-index') != "") linkType = "photo view";
+                        else if($(this).attr('class') == 'btn_detail') linkType = "photo view";
+                        else if($(this).closest('.obj_pop').length == 1 && $(this).attr('class') == null) linkType = "photo view";
+                        else if($(this).closest('.dir-ctrl').length == 1 && ($(this).attr('class') == null || $(this).attr('class') == '')) linkType = "photo view";
+                        
+                        if(linkType != "")
+                        {
+                            dtmDataLayer.internal_link="conversion|showroom|" + dtmDataLayer.vehicle_name + "|" + linkType;
+                            if(typeof _satellite != 'undefined') _satellite.track('internal_link');
+                        }
+                    }
+                });
+                
+                $('.vr360 .vrStart a').click(function(){
+                    dtmDataLayer.internal_link="conversion|showroom|" + dtmDataLayer.vehicle_name + "|360 vr view";
+                    if(typeof _satellite != 'undefined') _satellite.track('internal_link');
+                });
+                
+             });
+         //}
+         
+         /*******************************
+          * Iframe resize function
+          *******************************/
+        $(function() {
+            try{
+                // browser compatibility: get method for event
+                // addEventListener(FF, Webkit, Opera, IE9+) and attachEvent(IE5-8)
+                var myEventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+                // create event listener
+                var myEventListener = window[myEventMethod];
+                // browser compatibility: attach event uses onmessage
+                var myEventMessage = myEventMethod == "attachEvent" ? "onmessage" : "message";
+                // register callback function on incoming message
+                myEventListener(myEventMessage, function (e) {
+                    // we will get a string (better browser support) and validate
+                    // if it is an int - set the height of the iframe #my-iframe-id
+                    if (e.data == parseInt(e.data)) {
+                        document.getElementById('iframe_ww').height = e.data + "px"; //아이프레임의 아이디 지정
+                    }
+                }, false);
+            }catch(e){}
+        });
+    </script>
+    <script type="text/javascript">
+        function inspectAlert(obj) {
+            var now = new Date(new Date().setMinutes(new Date().getMinutes() + new Date().getTimezoneOffset() + 540));
+            var start = new Date(2017, 01, 04, 21, 30, 00); // Month는 00부터 시작
+            var end = new Date(2017, 01, 05, 05, 00, 00);
+            if (now.getTime() > start.getTime() && now.getTime() < end.getTime())
+            {
+                $(obj).unbind('click');
+                $(obj).attr('href', '#none');
+                alert("Sorry for your inconvenience.\nWe are currently updating this page.\n\nThis page will be available from 5AM on February 5th\n(Korean Local Time).");
+                return false;
+            }
+            
+            return true;
+        }
+    </script>
+    <form id="meetShareKia" name="meetShareKia" method="post"><input type="hidden" name="VEHICLES" id="VEHICLES"></form>
+    <form id="headerForm" name="headerForm" method="post" onsubmit="return false;">
+    
+    <div id="header">
+        <div class="inner_cont">
+            <h1><a href="https://www.kia.com/worldwide/main.do" class="tit_logo"><img src="https://www.kia.com/worldwide/images/img_logo1.png" width="75" height="38" alt="KIA" /></a></h1>
+            <div id="gnb" class="nav_gnb">
+                <ul class="list_menu">
+                    <li>
+                        <a href="#none" class="btn_menu">Showroom</a>
+                        <div class="wrap_sub">
+                            <ul class="tab_info">
+                                <li class="on"><a href="#none"><span class="ico_comm"></span>All Vehicles</a></li>
+                                <li><a href="#none"><span class="ico_comm"></span>New</a></li>
+                                <li><a href="#none"><span class="ico_comm"></span>Cars</a></li>
+                                <li><a href="#none"><span class="ico_comm"></span>SUV &amp; MPV</a></li>
+                                <li><a href="#none"><span class="ico_comm"></span>Eco</a></li>
+                                <li><a href="#none"><span class="ico_comm"></span>Commercial</a></li>
+                            </ul>
+                            <!-- s:20190326 -->
+                            <ul class="list_vehicles">
+                                <li data-group="group2">
+                                    <a href="https://www.kia.com/worldwide/vehicles/all-new-picanto.do" class="upcoming2" style="background:none;">
+                                        <img src="https://www.kia.com/worldwide/images/vehicles/img_all_new_picanto1.png" alt="Picanto" />
+                                        <div class="animate">
+                                            <img src="https://www.kia.com/worldwide/images/vehicles/img_all_new_picanto1_txt_ver2.png" class="txt" alt="Picanto" data-width="92" data-height="47" />
+                                            <img src="https://www.kia.com/worldwide/images/vehicles/img_all_new_picanto1_upcoming_ver2.png" class="car" alt="Picanto" />
+                                        </div>
+                                        <em class="name">Picanto</em>
+                                    </a>
+                                </li>
+                                <li data-group="group2">
+                                    <a href="https://www.kia.com/worldwide/vehicles/all-new-rio-4dr.do" class="upcoming2" style="background:none;">
+                                        <img src="https://www.kia.com/worldwide/images/vehicles/img_all_new_rio_4door1.png" alt="Rio Sedan" />
+                                        <div class="animate">
+                                            <img src="https://www.kia.com/worldwide/images/vehicles/img_all_new_rio_4door1_txt_ver2.png" class="txt" alt="Rio Sedan" data-width="115" data-height="47" />
+                                            <img src="https://www.kia.com/worldwide/images/vehicles/img_all_new_rio_4door1_upcoming_ver2.png" class="car" alt="Rio Sedan" />
+                                        </div>
+                                        <em class="name">Rio Sedan</em>
+                                    </a>
+                                </li>
+                                <li data-group="group2">
+                                    <a href="https://www.kia.com/worldwide/vehicles/rio.do" class="upcoming2" style="background:none;">
+                                        <img src="https://www.kia.com/worldwide/images/vehicles/img_all_new_rio1.png" alt="Rio Hatchback" />
+                                        <div class="animate">
+                                            <img src="https://www.kia.com/worldwide/images/vehicles/img_all_new_rio1_txt_ver2.png" class="txt" alt="Rio Hatchback" data-width="115" data-height="47" />
+                                            <img src="https://www.kia.com/worldwide/images/vehicles/img_all_new_rio1_upcoming_ver2.png" class="car" alt="Rio Hatchback" />
+                                        </div>
+                                        <em class="name">Rio Hatchback</em>
+                                    </a>
+                                </li>
+                                <li data-group="group2" class="new">
+                                    <a href="https://www.kia.com/worldwide/vehicles/cerato-forte.do" class="upcoming2" style="background:none;">
+                                        <img src="https://www.kia.com/worldwide/images/vehicles/img_cerato1.png" alt="Cerato/Forte" />
+                                        <div class="animate">
+                                            <img src="https://www.kia.com/worldwide/images/vehicles/img_cerato1_txt_ver2.png" class="txt" alt="Cerato/Forte upcoming" data-width="115" data-height="47" />
+                                            <img src="https://www.kia.com/worldwide/images/vehicles/img_cerato1_upcoming_ver2.png" class="car" alt="Cerato/Forte upcoming" />
+                                        </div>
+                                        <em class="name">Cerato/Forte</em>
+                                    </a>
+                                </li>
+
+
+                                <li data-group="group2" class="new">
+                                    <a href="https://www.kia.com/worldwide/vehicles/ceed.do" class="upcoming2" style="background:none;">
+                                        <img src="https://www.kia.com/worldwide/images/vehicles/img_ceed1.png" alt="Ceed" />
+                                        <div class="animate">
+                                            <img src="https://www.kia.com/worldwide/images/vehicles/img_ceed1_txt.png" class="txt" alt="Ceed upcoming2" data-width="94" data-height="47" />
+                                            <img src="https://www.kia.com/worldwide/images/vehicles/img_ceed1_upcoming.png" class="car" alt="Ceed upcoming2" />
+                                        </div>
+                                        <em class="name">Ceed</em>
+                                    </a>
+                                </li>
+
+                                <li data-group="group2" class="new">
+                                    <a href="https://www.kia.com/worldwide/vehicles/proceed.do" class="upcoming2" style="background:none;">
+                                        <img src="https://www.kia.com/worldwide/images/vehicles/img_pro-ceed1.png" alt="ProCeed" />
+                                        <div class="animate">
+                                            <img src="https://www.kia.com/worldwide/images/vehicles/img_pro-ceed1_txt.png" class="txt" alt="ProCeed upcoming2" data-width="142" data-height="47" />
+                                            <img src="https://www.kia.com/worldwide/images/vehicles/img_pro-ceed1_upcoming.png" class="car" alt="ProCeed upcoming2" />
+                                        </div>
+                                        <em class="name">ProCeed</em>
+                                    </a>
+                                </li>
+
+
+                                <!-- <li data-group="group2">
+                                    <a href="https://www.kia.com/worldwide/vehicles/ceed.do">
+                                        <img src="https://www.kia.com/worldwide/images/vehicles/img_ceed1.png" alt="cee’d" />
+                                        <em class="name">cee’d</em>
+                                    </a>
+                                </li>
+                                <li data-group="group2">
+                                    <a href="https://www.kia.com/worldwide/vehicles/ceed-3dr.do">
+                                        <img src="https://www.kia.com/worldwide/images/vehicles/img_pro-ceed1.png" alt="pro_cee’d" />
+                                        <em class="name">pro_cee’d</em>
+                                    </a>
+                                </li> -->
+
+                                <!-- <li data-group="group2">
+                                    <a href="https://www.kia.com/worldwide/vehicles/ceed-sportswagon.do">
+                                        <img src="https://www.kia.com/worldwide/images/vehicles/img_ceed-sw-sp1.png" alt="cee’d Sportswagon" />
+                                        <em class="name">cee’d Sportswagon</em>
+                                    </a>
+                                </li> -->
+
+                                <li data-group="group2" class="new"> <!-- 20190403 group2로 수정 -->
+                                    <a href="https://www.kia.com/worldwide/vehicles/optima.do" class="upcoming2" style="background:none;">
+                                        <img src="https://www.kia.com/worldwide/images/vehicles/img_optima1.png" alt="Optima" />
+                                        <div class="animate">
+                                            <img src="https://www.kia.com/worldwide/images/vehicles/img_optima1_txt.png" class="txt" alt="Optima upcoming2" data-width="115" data-height="47" />
+                                            <img src="https://www.kia.com/worldwide/images/vehicles/img_optima1_upcoming.png" class="car" alt="Optima upcoming2" />
+                                        </div>
+                                        <em class="name">Optima</em>
+                                    </a>
+                                </li>
+
+                                <!-- <li data-group="group4">
+                                    <a href="https://www.kia.com/worldwide/vehicles/all-new-optima-hybrid.do">
+                                        <img src="https://www.kia.com/worldwide/images/vehicles/img_all_new_optima_hybrid1.png" alt="Optima Hybrid" />
+                                        <em class="name">Optima Hybrid</em>
+                                    </a>
+                                </li> -->
+                                <li data-group="group4" class="new"> <!-- 20190403 group4로 수정 -->
+                                    <a href="https://www.kia.com/worldwide/vehicles/optima-hybrid.do" class="upcoming2" style="background:none;">
+                                        <img src="https://www.kia.com/worldwide/images/vehicles/img_optima_hybrid1.png" alt="Optima Hybrid" />
+                                        <div class="animate">
+                                            <img src="https://www.kia.com/worldwide/images/vehicles/img_optima_hybrid1_txt.png" class="txt" alt="Optima Hybrid upcoming2" data-width="138" data-height="47" />
+                                            <img src="https://www.kia.com/worldwide/images/vehicles/img_optima_hybrid_upcoming.png" class="car" alt="Optima Hybrid upcoming2" />
+                                        </div>
+                                        <em class="name">Optima Hybrid</em>
+                                    </a>
+                                </li>
+
+
+
+                                <li data-group="group2">
+                                    <a href="https://www.kia.com/worldwide/vehicles/all-new-cadenza.do">
+                                        <img src="https://www.kia.com/worldwide/images/vehicles/img_all_new_cadenza1.png" alt="Cadenza" />
+                                        <em class="name">Cadenza</em>
+                                    </a>
+                                </li>
+
+                                <li data-group="group2">
+                                    <a href="https://www.kia.com/worldwide/vehicles/stinger.do" class="upcoming2" style="background:none;">
+                                        <img src="https://www.kia.com/worldwide/images/vehicles/img_Stinger1.png" alt="Stinger">
+                                        <div class="animate">
+                                            <img src="https://www.kia.com/worldwide/images/vehicles/img_stinger1_txt_ver2.png" class="txt" alt="Stinger upcoming" data-width="150" data-height="47" />
+                                            <img src="https://www.kia.com/worldwide/images/vehicles/img_Stinger1_upcoming_ver2.png" class="car" alt="Stinger upcoming" />
+                                        </div>
+                                        <em class="name">Stinger</em>
+                                    </a>
+                                </li>
+                                <li data-group="group2" class="new">
+                                    <a href="https://www.kia.com/worldwide/vehicles/k900.do" class="upcoming2" style="background:none;">
+                                        <img src="https://www.kia.com/worldwide/images/vehicles/img_K900.png" alt="K900">
+                                        <div class="animate">
+                                            <img src="https://www.kia.com/worldwide/images/vehicles/img_K900_txt_ver2.png" class="txt" alt="K900" data-width="150" data-height="47" />
+                                            <img src="https://www.kia.com/worldwide/images/vehicles/img_K900_upcoming_ver2.png" class="car" alt="K900" />
+                                        </div>
+                                        <em class="name">K900</em>
+                                    </a>
+                                </li>
+
+                                <li data-group="group3">
+                                    <a href="https://www.kia.com/worldwide/vehicles/stonic.do" class="upcoming2" style="background:none;">
+                                        <img src="https://www.kia.com/worldwide/images/vehicles/img_stonic1.png" alt="stonic">
+                                        <div class="animate">
+                                            <img src="https://www.kia.com/worldwide/images/vehicles/img_stonic1_txt_ver2.png" class="txt" alt="stonic" data-width="150" data-height="47" />
+                                            <img src="https://www.kia.com/worldwide/images/vehicles/img_stonic1_upcoming_ver2.png" class="car" alt="stonic" />
+                                        </div>
+                                        <em class="name">Stonic</em>
+                                    </a>
+                                </li>
+                                <li data-group="group4">
+                                    <a href="https://www.kia.com/worldwide/vehicles/niro.do">
+                                        <img src="https://www.kia.com/worldwide/images/vehicles/img_niro1.png" alt="Niro" />
+                                        <em class="name">Niro</em>
+                                    </a>
+                                </li>
+
+                <!-- 20190326 new soul -->
+                <li data-group="group3" class="new">
+                    <a href="https://www.kia.com/worldwide/vehicles/soul.do" class="upcoming2" style="background:none;">
+                        <img src="https://www.kia.com/worldwide/images/vehicles/img_soul_201903_1.png" alt="Soul" />
+                        <div class="animate">
+                            <img src="https://www.kia.com/worldwide/images/vehicles/img_soul_201903_txt.png" class="txt" alt="Soul" data-width="138" data-height="47" />
+                            <img src="https://www.kia.com/worldwide/images/vehicles/img_soul_201903_2.png" class="car" alt="Soul" />
+                        </div>
+                        <em class="name">Soul</em>
+                    </a>
+                </li>
+                <!-- //20190326 -->
+
+                <!-- 2019026 기존 soul 메뉴 삭제
+                                <li data-group="group3" class="new">
+                                    <a href="https://www.kia.com/worldwide/vehicles/all-new-soul.do" class="upcoming2">
+                                        <img src="https://www.kia.com/worldwide/images/vehicles/img_all_new_soul1.png" alt="Soul">
+                                        <div class="animate">
+                                            <img src="https://www.kia.com/worldwide/images/vehicles/img_all_new_soul1_txt.png" class="txt" alt="Soul upcoming" data-width="138" data-height="47" />
+                                            <img src="https://www.kia.com/worldwide/images/vehicles/img_all_new_soul_upcoming.png" class="car" alt="Soul upcoming" />
+                                        </div>
+                                        <em class="name">Soul</em>
+                                    </a>
+                                </li>
+
+                                <li data-group="group3">
+                                    <a href="https://www.kia.com/worldwide/vehicles/soul.do">
+                                        <img src="https://www.kia.com/worldwide/images/vehicles/img_soul1.png" alt="Soul" />
+                                        <em class="name">Soul</em>
+                                    </a>
+                                </li>
+                -->
+
+                                <li data-group="group4">
+                                    <a href="https://www.kia.com/worldwide/vehicles/soul-ev.do">
+                                        <img src="https://www.kia.com/worldwide/images/vehicles/img_soul-ev1.png" alt="Soul EV" />
+                                        <em class="name">Soul EV</em>
+                                    </a>
+                                </li>
+                                <li data-group="group3">
+                                    <a href="https://www.kia.com/worldwide/vehicles/carens-rondo.do">
+                                        <img src="https://www.kia.com/worldwide/images/vehicles/img_carens-rondo1.png" alt="Carens/Rondo" />
+                                        <em class="name">Carens/Rondo</em>
+                                    </a>
+                                </li>
+                                <li data-group="group3">
+                                    <a href="https://www.kia.com/worldwide/vehicles/carnival.do">
+                                        <img src="https://www.kia.com/worldwide/images/vehicles/img_carnival1.png" alt="Grand Carnival/Sedona" />
+                                        <em class="name">Grand Carnival/Sedona</em>
+                                    </a>
+                                </li>
+
+                                <!--
+
+                                <li data-group="group3">
+                                    <a href="https://www.kia.com/worldwide/vehicles/all-new-sportage.do">
+                                        <img src="https://www.kia.com/worldwide/images/vehicles/img_new_sportage1.png" alt="Sportage" />
+                                        <em class="name">Sportage</em>
+                                    </a>
+                                </li>
+                                -->
+                                <li data-group="group3" class="new">
+                                    <a href="https://www.kia.com/worldwide/vehicles/sportage.do" class="upcoming2" style="background:none;">
+                                        <img src="https://www.kia.com/worldwide/images/vehicles/img_sportage1.png" alt="Sportage" />
+                                        <div class="animate">
+                                            <img src="https://www.kia.com/worldwide/images/vehicles/img_sportage1_txt.png" class="txt" alt="Sportage" data-width="138" data-height="47" />
+                                            <img src="https://www.kia.com/worldwide/images/vehicles/img_sportage1_upcoming.png" class="car" alt="Sportage" />
+                                        </div>
+                                        <em class="name">Sportage</em>
+                                    </a>
+                                </li>
+
+
+
+                                <li data-group="group3">
+                                    <a href="https://www.kia.com/worldwide/vehicles/sorento.do" class="upcoming2" style="background:none;">
+                                        <img src="https://www.kia.com/worldwide/images/vehicles/img_sorento1.png" alt="Sorento" />
+                                        <div class="animate">
+                                            <img src="https://www.kia.com/worldwide/images/vehicles/img_sorento1_txt_ver2.png" class="txt" alt="Sorento" data-width="150" data-height="47" />
+                                            <img src="https://www.kia.com/worldwide/images/vehicles/img_sorento1_upcoming_ver2.png" class="car" alt="Sorento" />
+                                        </div>
+                                        <em class="name">Sorento</em>
+                                    </a>
+                                </li>
+
+                                <li data-group="group3">
+                                    <a href="https://www.kia.com/worldwide/vehicles/mohave.do">
+                                        <img src="https://www.kia.com/worldwide/images/vehicles/img_mohave1.png" alt="Mohave" />
+                                        <em class="name">Mohave</em>
+                                    </a>
+                                </li>
+                                <!--190514 add-->
+                                <li data-group="group3" class="new">
+                                  <a href="https://www.kia.com/worldwide/vehicles/telluride.do">
+                                    <img src="https://www.kia.com/worldwide/images/vehicles/img_telluride1.png" alt="Telluride">
+                                    <em class="name">Telluride</em>
+                                  </a>
+                                </li>
+                                <!--//190514 add-->
+                                <li data-group="group5">
+                                    <a href="https://www.kia.com/worldwide/vehicles/k2500-k2700-k3000s-k4000g.do">
+                                        <img src="https://www.kia.com/worldwide/images/vehicles/img_k2700-k2500-k4000g1.png" alt="K2500/K2700/K3000S/K4000G" />
+                                        <em class="name">K2500/K2700/<br>K3000S/K4000G</em>
+                                    </a>
+                                </li>
+                            </ul>
+                            <!-- e:20190326 -->
+                        </div>
+                    </li>
+
+
+                    <li class="drop_menu">
+                        <a href="#none" class="btn_menu" onclick="inspectAlert(this);">Experience Kia</a>
+                        <ul class="depth2 experience">
+
+                            <li class="depth2_1">
+                                <a href=" /worldwide/hands-on.do" class="depth2_a">Hands-On</a>
+                            </li>
+                            <li class="depth2_1">
+                                <a href="https://www.kia.com/worldwide/share_kia.do" class="depth2_a">Share #Kia</a>
+                            </li>
+                            <li class="depth2_1">
+                                <a href="https://www.kia.com/worldwide/brand-campaign/peter-returns.do" class="depth2_a">Brand Campaign</a>
+                            </li>
+                            <li class="depth2_1">
+                                <a href="https://www.kia.com/worldwide/experience_kia/sports/sports.do" class="depth2_a">Sports</a>
+                            </li>
+                            <li class="depth2_1">
+                                <a href="https://www.kia.com/worldwide/magazine.do" class="depth2_a">Magazine</a>
+                            </li>
+                            <!-- 20190403 메뉴 삭제
+                            <li class="depth2_1">
+                                <a href="https://www.kia.com/worldwide/australian-open-2019/index.html" target="_blank" title="window open" class="depth2_a">Australian Open 2019</a>
+                            </li>    -->
+                            <li class="depth2_1">
+                                <a href="https://www.kia.com/worldwide/future-technology.do" class="depth2_a">Future Technology</a> <!-- 20190403 CES2019삭제 및 링크파일명 변경 -->
+                            </li>
+                            <!-- 20190403 레드닷 삭제
+                            <li class="etc">
+                                <a href="https://www.kia.com/worldwide/vehicles/stinger.do"><span>reddot award 2018 best of the best</span></a>
+                            </li>  -->
+                        </ul>
+                    </li>
+
+                    <li class="drop_menu">
+                        <a href="#none" class="btn_menu" onclick="inspectAlert(this);">Inside Kia</a>
+                        <ul class="depth2 inside">
+
+                            <li class="depth2_1">
+                                <a href="https://www.kia.com/worldwide/experience_kia/rnd/driving.do" class="depth2_a">R&amp;D</a>
+                                <ul class="depth3">
+                                    <li class="depth3_1">
+                                        <a href="https://www.kia.com/worldwide/experience_kia/rnd/driving.do" class="depth3_a">Driving</a>
+                                    </li>
+                                    <li class="depth3_1">
+                                        <a href="https://www.kia.com/worldwide/experience_kia/rnd/safety.do" class="depth3_a">Safety</a>
+                                    </li>
+                                    <li class="depth3_1">
+                                        <a href="https://www.kia.com/worldwide/experience_kia/rnd/performance.do" class="depth3_a">Performance</a>
+                                    </li>
+                                    <li class="depth3_1">
+                                        <a href="https://www.kia.com/worldwide/experience_kia/rnd/technology.do" class="depth3_a">Technology</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="depth2_1">
+                                <a href="https://www.kia.com/worldwide/experience_kia/design/design_directions.do" class="depth2_a">Design</a>
+                                <ul class="depth3">
+                                    <li class="depth3_1">
+                                        <a href="https://www.kia.com/worldwide/experience_kia/design/design_directions.do" class="depth3_a">Design Directions</a>
+                                    </li>
+                                    <li class="depth3_1">
+                                        <a href="https://www.kia.com/worldwide/experience_kia/design/design_center.do" class="depth3_a">Design Center</a>
+                                    </li>
+                                    <li class="depth3_1">
+                                        <a href="https://www.kia.com/worldwide/experience_kia/design/design_people.do" class="depth3_a">Design People</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="depth2_1">
+                                <a href="https://www.kia.com/worldwide/experience_kia/concept_cars/concept_cars.do" class="depth2_a n_design">Concept Cars</a>
+                            </li>
+
+                            <li class="depth2_1">
+                                <a href="https://www.kia.com/worldwide/experience_kia/production_process/production_process.do" class="depth2_a n_design">Production Process</a>
+                            </li>
+
+                            <li class="depth2_1">
+                                <a href="https://www.kia.com/worldwide/experience_kia/drive_wise/about_drive_wise.do" class="depth2_a">DRIVE WISE</a>
+                                <ul class="depth3">
+                                    <li class="depth3_1">
+                                        <a href="https://www.kia.com/worldwide/experience_kia/drive_wise/about_drive_wise.do" class="depth3_a">About DRIVE WISE</a>
+                                    </li>
+                                    <li class="depth3_1">
+                                        <a href="https://www.kia.com/worldwide/experience_kia/drive_wise/driving_assist.do" class="depth3_a">Driving Assist</a>
+                                    </li>
+                                    <li class="depth3_1">
+                                        <a href="https://www.kia.com/worldwide/experience_kia/drive_wise/parking_assist.do" class="depth3_a">Parking Assist</a>
+                                    </li>
+                                    <li class="depth3_1">
+                                        <a href="https://www.kia.com/worldwide/experience_kia/drive_wise/autonomous_driving.do" class="depth3_a">Autonomous Driving</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="depth2_1">
+                                <a href="https://www.kia.com/worldwide/about_kia/eco_dynamics/about_eco_dynamics.do" class="depth2_a">ECO dynamics</a>
+                                <ul class="depth3">
+                                    <!-- 20190411 삭제  <li class="depth3_1">
+                                        <a href="https://www.kia.com/worldwide/about_kia/eco_dynamics/about_eco_dynamics.do" class="depth3_a">About Eco dynamics</a>
+                                    </li> -->
+                                    <li class="depth3_1">
+                                        <a href="https://www.kia.com/worldwide/about_kia/eco_dynamics/hybrid.do" class="depth3_a">Hybrid</a>
+                                    </li>
+                                    <li class="depth3_1">
+                                        <a href="https://www.kia.com/worldwide/about_kia/eco_dynamics/electric_vehicles.do" class="depth3_a">Electric Vehicles</a>
+                                    </li>
+                                    <li class="depth3_1">
+                                        <a href="https://www.kia.com/worldwide/about_kia/eco_dynamics/hydrogen_fuel_cell_cars.do" class="depth3_a">Hydrogen Fuel Cell Cars</a>
+                                    </li>
+                                    <li class="depth3_1">
+                                        <a href="https://www.kia.com/worldwide/about_kia/eco_dynamics/internal_combustion_engine.do" class="depth3_a">Internal Combustion Engine</a>
+                                    </li>
+                                    <li class="depth3_1">
+                                        <a href="https://www.kia.com/worldwide/about_kia/eco_dynamics/plug_in_hybrid.do" class="depth3_a">Plug-in Hybrid</a>
+                                    </li>
+                                    <li class="depth3_1">
+                                        <a href="https://www.kia.com/worldwide/about_kia/eco_dynamics/eco_friendly_monitor.do" class="depth3_a">ECO-Friendly Monitor</a>
+                                    </li>
+                                    <li class="depth3_1">
+                                        <a href="https://www.kia.com/worldwide/about_kia/eco_dynamics/car_lifecycle_management.do" class="depth3_a">Car Lifecycle Management</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="etc">
+                                <a href="https://www.kia.com/worldwide/vehicles/stonic.do"><span>Live every moment STONIC</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="https://www.kia.com/worldwide/KiaBuzz/Main.do" class="btn_menu">KiaBuzz</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="findKia">
+        <div class="inner_cont">
+            <a href="#none" class="btn_findkia"><span class="ico_comm"></span>Kia In Your Country</a>
+            <div class="layer_findkia">
+                <input type="hidden" name="REGION" id="REGION" value="" />
+                <input type="hidden" name="COUNTRY" id="COUNTRY" value="" />
+                <a href="#none" class="btn_close">
+                    <span class="ico_comm">Close</span>
+                </a>
+                <strong class="tit">Find Kia in your country or region</strong>
+                
+                
+                <div class="find_map">
+                    <div class="selectMap">
+                        <img src="https://www.kia.com/worldwide/images/find_kia/map.jpg" alt="Find Kia in your country or region" id="find_kia_map" usemap="#find_maps" />
+                        <map name="find_maps" id="find_maps">
+                            <area shape="poly" data-src="https://www.kia.com/worldwide/images/find_kia/map_asia.jpg" coords="185,122,186,122,183,125,178,129,171,130,172,139,177,142,184,141,186,147,190,151,193,151,195,162,201,173,208,180,215,182,217,178,213,171,213,161,223,153,225,149,230,149,233,158,236,161,239,163,242,160,243,166,242,173,245,177,235,180,239,185,245,191,249,198,254,205,266,212,278,214,289,217,298,213,298,209,295,204,290,198,299,188,286,189,286,185,288,183,292,180,298,183,300,179,298,172,293,166,289,158,285,154,286,143,284,136,284,131,283,127,277,119,278,120,283,120,286,122,291,125,297,129,302,124,307,122,310,119,309,112,306,107,306,105,311,104,308,100,303,97,291,97,285,90,273,88,261,79,253,80,254,83,253,86,249,86,242,87,235,84,229,83,223,82,219,85,212,84,202,89,198,96,198,97,192,101,185,101,181,103,178,109,174,105,164,101,158,102,152,101,150,105,154,114,161,117,165,116,169,118,175,122,181,117,183,118,187,119" href="#" alt="Asia" />
+                            <area shape="poly" data-src="https://www.kia.com/worldwide/images/find_kia/map_africa.jpg" coords="48,120,43,125,42,130,37,129,34,132,30,132,33,136,34,139,32,143,29,147,31,152,30,158,28,160,30,163,30,167,34,172,36,174,41,180,46,184,52,183,58,184,68,180,72,184,76,184,79,189,76,193,79,198,82,204,83,208,84,212,85,215,84,220,82,225,81,230,85,237,86,241,87,246,87,251,90,254,92,260,93,265,98,268,105,268,112,264,123,252,123,248,129,245,127,237,134,231,140,234,139,242,142,248,149,248,152,241,165,240,170,238,167,233,154,232,157,226,154,217,149,220,138,220,135,203,149,188,157,180,158,173,157,167,152,167,144,170,137,160,131,151,129,146,124,137,122,134,126,136,126,128,122,126,116,126,112,128,103,123,97,124,95,128,89,123,84,122,83,115,79,112,68,114,59,116,53,117" href="#" alt="Africa" />
+                            <area shape="poly" data-src="https://www.kia.com/worldwide/images/find_kia/map_central_south_america.jpg" coords="444,178,438,177,431,173,428,168,422,165,420,160,425,155,430,155,428,158,436,158,438,162,436,168,439,172,447,172,454,167,460,165,465,165,472,169,475,164,471,159,464,156,454,157,447,156,440,153,445,149,441,147,434,147,441,142,446,143,447,138,452,140,453,144,453,148,460,149,466,151,471,152,474,156,477,153,480,158,483,164,484,168,479,169,480,173,486,177,492,180,496,184,499,189,502,192,507,194,512,196,518,197,522,201,527,203,528,209,525,214,522,218,520,222,521,227,520,232,518,238,515,241,510,243,505,244,505,249,505,254,502,259,498,263,494,266,494,270,489,273,487,277,485,281,483,285,486,289,484,294,488,298,493,300,494,303,488,304,482,301,474,296,469,289,466,286,469,283,467,278,464,273,462,269,463,261,462,252,462,240,460,233,456,228,449,223,445,216,441,208,437,205,438,199,439,192,443,186,445,182" href="#" alt="Central & South America" />
+                            <area shape="poly" data-src="https://www.kia.com/worldwide/images/find_kia/map_eastern_europe.jpg" coords="322,60,328,65,322,67,320,71,314,70,310,70,316,75,319,81,317,87,309,82,302,75,303,70,299,68,297,72,291,71,281,72,278,77,282,79,287,78,300,89,302,95,303,100,299,99,295,93,293,99,290,104,284,104,281,99,278,95,271,92,265,86,260,85,259,90,254,91,249,91,244,93,239,91,235,89,231,91,227,89,223,91,218,91,213,90,208,93,205,97,201,103,201,106,195,106,189,106,188,110,183,112,182,116,177,115,171,112,167,108,163,107,159,108,155,107,150,106,150,111,146,113,141,115,136,116,127,117,121,118,114,118,110,115,108,111,112,106,118,104,125,103,132,105,128,101,122,99,117,99,116,95,113,99,109,96,106,89,106,80,108,72,110,66,109,60,106,53,108,48,117,50,122,52,126,55,124,51,128,49,131,53,136,50,133,45,140,38,151,36,154,40,148,42,143,46,147,47,153,49,154,45,158,42,162,45,166,44,170,45,172,42,176,41,180,38,175,35,174,31,183,32,196,36,207,38,212,40,220,43,227,42,235,44,239,47,242,45,248,46,238,41,242,38,248,39,254,38,259,41,252,44,260,45,267,47,277,46,281,49,289,49,294,48,299,48,306,50,313,51,321,53,330,55,334,61" href="#" alt="Eastern Europe" />
+                            <area shape="poly" data-src="https://www.kia.com/worldwide/images/find_kia/map_middle_east.jpg" coords="152,131,157,136,163,137,169,140,176,141,178,136,181,133,189,126,191,118,187,111,181,113,178,112,172,116,164,112,158,112,154,113,148,111,145,108,141,109,136,111,131,113,127,112,123,116,118,118,121,123,122,127,122,132,126,136,129,141,131,147,135,152,138,157,139,163,143,167,149,166,155,163,161,159,166,155,170,150,173,147,169,144,164,140,157,141" href="#" alt="Middle East" />
+                            <area shape="poly" data-src="https://www.kia.com/worldwide/images/find_kia/map_morth_america.jpg" coords="422,152,416,152,414,147,416,142,418,137,423,132,429,133,435,130,440,132,442,137,445,141,449,136,447,131,448,127,453,123,461,118,461,113,468,107,472,106,475,101,480,100,485,101,489,99,489,95,489,90,494,89,495,93,503,95,507,91,505,86,507,81,501,75,499,67,494,68,490,64,486,61,481,61,476,68,475,73,470,76,466,83,466,77,460,75,455,71,458,66,467,63,471,63,474,64,477,61,478,57,483,55,486,51,483,47,478,50,474,46,469,44,465,48,459,50,454,52,450,50,445,53,441,51,435,50,429,47,424,46,419,48,413,48,409,49,403,48,395,47,388,45,379,47,366,51,367,55,363,54,357,56,359,60,353,62,349,67,349,72,324,81,325,84,343,78,354,75,364,73,368,68,376,68,383,70,384,74,384,78,385,83,385,87,387,93,382,100,377,107,377,113,378,119,382,123,382,128,384,132,382,135,385,137,390,145,396,147,397,152,406,158,416,161,421,164,427,160,432,152,433,147,426,147" href="#" alt="North America" />
+                            <area shape="poly" data-src="https://www.kia.com/worldwide/images/find_kia/map_pacific.jpg" coords="415,222,396,228,392,236,373,231,369,242,340,246,340,254,367,265,373,271,374,275,362,283,347,292,339,291,345,284,328,270,321,276,313,286,309,286,307,275,304,269,298,265,295,261,287,264,276,268,265,267,263,261,266,258,266,249,267,241,277,235,283,232,289,225,296,220,303,217,309,216,316,211,317,206,312,203,305,199,303,194,309,192,314,196,319,195,326,197,335,203,342,201,349,202,356,206,361,211,364,214,366,218,384,227,411,219" href="#" alt="Pacific" />
+                            <area shape="poly" data-src="https://www.kia.com/worldwide/images/find_kia/map_western_europe.jpg" coords="97,111,101,116,106,117,108,111,112,106,115,101,112,93,109,89,110,81,112,73,114,65,112,56,110,48,105,46,101,37,103,33,94,30,80,32,86,38,91,40,89,50,85,55,80,59,72,63,73,69,77,76,73,80,70,83,64,73,61,69,45,55,35,54,32,59,40,63,54,74,47,82,53,86,57,89,57,93,61,98,51,100,47,107,45,113,51,116,58,117,66,113,69,108,74,104,80,104,87,108,89,111,83,112,86,117,91,118" href="#" alt="Western Europe" />
+                        </map>
+                    </div>
+                    <div class="findTxt">
+                        <div class="tits">
+                            <div>
+                                <!-- <img src="https://www.kia.com/worldwide/images/find_kia/01_africa/01_algeria.jpg" alt="Democratic Republic of the Congo" /> -->
+                                <strong>Democratic Republic of the Congo</strong>
+                            </div>
+                        </div>
+                        <div class="url" style="display:none;">
+                            <strong>URL</strong>
+                            <p><a href="http://www.kia.com/worldwide/" target="_blank" onclick="clickCountryURL('gnb');">www.kia.com</a></p>
+                        </div>
+                        <div class="add">
+                            <strong>Office Address</strong>
+                            <p>187, 188-B, Teigaon Industrial Area, Dhaka-1208, Bangladesh</p>
+                        </div>
+                        <div class="tel">
+                            <strong>TEL</strong>
+                            <p>+880-2-988-4031</p>
+                        </div>
+                        <div class="email">
+                            <strong>E-mail</strong>
+                            <p>worldwide@kia.com</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="findList">
+                    
+                    <ul>
+
+                        <li>
+                            <a href="#" data-mode="url" data-url="https://www.kia.com/worldwide/main.do1" data-tit="test1234" data-add="111, 188-B, Teigaon Industrial Area, Dhaka-1208, Bangladesh" data-tel="+777-7-1234" data-src="https://www.kia.com/worldwide/images/find_kia/01_africa/01_algeria.jpg">
+                                <div>
+                                    <!-- <img src="https://www.kia.com/worldwide/images/find_kia/01_africa/01_algeria.jpg" alt="Democratic Republic of the Congo" /> -->
+                                    <span>Democratic Republic of the Congo</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" data-mode="url" data-url="https://www.kia.com/worldwide/main.do2" data-tit="test1234" data-add="111, 188-B, Teigaon Industrial Area, Dhaka-1208, Bangladesh" data-tel="+777-7-1234" data-src="https://www.kia.com/worldwide/images/find_kia/01_africa/09_ivory_coast.jpg">
+                                <div>
+                                    <!-- <img src="https://www.kia.com/worldwide/images/find_kia/01_africa/09_ivory_coast.jpg" alt="Democratic Republic of the Congo" /> -->
+                                    <span>Democratic Republic of the Congo</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" data-mode="url" data-url="http://www.kia.com/worldwide/main.do3" data-tit="test1234" data-add="111, 188-B, Teigaon Industrial Area, Dhaka-1208, Bangladesh" data-tel="+777-7-1234" data-src="https://www.kia.com/worldwide/images/find_kia/01_africa/02_angola.jpg">
+                                <div>
+                                    <!-- <img src="https://www.kia.com/worldwide/images/find_kia/01_africa/02_angola.jpg" alt="Democratic Republic of the Congo" /> -->
+                                    <span>Democratic Republic of the Congo</span>
+                                </div>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+    
+	
+
+
+
+	
+
+
+
+
+
+<script type="text/javascript">
+    /*******************************
+     * ajax ###
+     *******************************/
+    
+    /*******************************
+     * valid ### (Check)
+     *******************************/
+
+    /*******************************
+     * general Javascript (do+name)
+     *******************************/
+
+    /*******************************
+     * click ### Button, Link
+     *******************************/
+
+    /*******************************
+     * Current Tile Init
+     *******************************/
+     function initMain() {
+         
+     }
+</script>
+
+    <div style="margin:0 auto;max-width:1920px;">
+
+        <!-- 산출물 영역 시작 -->
+        <link rel="stylesheet" type="text/css" href="./style.css">
+        <script src="./script.js"></script>
+        <div class="content_wrap">
+            <section class="section sec1">section1</section>
+            <section class="section sec2">section2</section>
+            <section class="section sec3">section3
+                <!-- <div class="count">
+                    <div class="scroll">0</div>
+                </div> -->
+                <img src="./images/dice_1.png">
+            </section>
+        </div>
+        <!-- 산출물 영역 끝 -->
+    </div> 
+
+    
+
+    <!-- </div> -->
+    <!-- //CONTAINER -->
+
+	
+
+    
+    <div id="footer">
+        <div class="after"></div>
+        <div class="inner_cont">
+            
+            <div class="footer_top">
+                <div class="link">
+                    <a class="link_page about_plus">About Kia<span class="ico_comm btn_footopen"></span></a>
+                    <span class="txt_bar">|</span>
+                    <a href="http://www.kianewscenter.com" target="_blank" class="link_page" onclick="dtmDataLayer.external_link='exit link|footer|global media center'; _satellite.track('external_link);')">Global Media Center</a>
+                    <span class="txt_bar">|</span>
+                    <a href="http://supplier.kia.com/" target="_blank" class="link_page">Suppliers</a>
+                    <span class="txt_bar">|</span>
+                    <a href="https://www.kia.com/worldwide/sitemap.do" class="link_page" onclick="inspectAlert(this);">Sitemap</a>
+                    <span class="txt_bar">|</span>
+                    <a href="https://www.kia.com/worldwide/downloadCenter.do" class="link_page">Download Center</a>
+                    
+                    <span class="txt_bar">|</span>
+                    <a href="https://www.kia.com/worldwide/disclaimer.do" class="link_page">Disclaimer</a>
+                </div>
+                <div class="box_sns">
+                    <a href="https://www.facebook.com/Kiamotorsworldwide" target="_blank" class="ico_comm btn_facebook" onclick="dtmDataLayer.external_link='sns|footer|facebook'; _satellite.track('external_link');">facebook</a>
+                    <a href="https://twitter.com/Kia_Motors" target="_blank" class="ico_comm btn_twitter" onclick="dtmDataLayer.external_link='sns|footer|twitter'; _satellite.track('external_link');">twitter</a>
+                    <a href="https://www.flickr.com/photos/kiamotorsworldwide/" target="_blank" class="ico_comm btn_flickr" onclick="dtmDataLayer.external_link='sns|footer|flickr'; _satellite.track('external_link');">flickr</a>
+                    <a href="https://instagram.com/kiamotorsworldwide/" target="_blank" class="ico_comm btn_instagram" onclick="dtmDataLayer.external_link='sns|footer|instagram'; _satellite.track('external_link');">instagram</a>
+                    <a href="https://www.youtube.com/user/KiaBUZZ" target="_blank" class="ico_comm btn_youtube" onclick="dtmDataLayer.external_link='sns|footer|youtube'; _satellite.track('external_link');">youtube</a>
+                    <!--<a href="http://kia-buzz.com/" target="_blank" class="ico_comm btn_kiabuzz" onclick="dtmDataLayer.external_link='sns|footer|kia-buzz'; _satellite.track('external_link');">kiabuzz</a>-->
+                </div>
+            </div>
+            <div class="about_content">
+                <ul>
+                    <li>
+                        <dl>
+                            <dt>Company</dt>
+                            <!-- <dd><a href="">Corporate</a></div></dd> -->
+                            <dd><a href="https://www.kia.com/worldwide/about_kia/company/corporate_philosophy.do">Philosophy </a></dd>
+                            <dd><a href="https://www.kia.com/worldwide/about_kia/company/corporate_identity.do">Corporate Identity</a></dd>
+                            <dd><a href="https://www.kia.com/worldwide/about_kia/company/history_of_kia.do">History of Kia</a></dd>
+                            <!--  20190411 삭제 <dd><a href="https://www.kia.com/worldwide/about_kia/company/kia_archives.do">Kia Archives</a></dd>-->
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>Brand</dt>
+                            <dd><a href="https://www.kia.com/worldwide/about_kia/brand/brand_identity.do">Brand Identity</a></dd>
+                            <dd><a href="https://www.kia.com/worldwide/brand-campaign/future-vision.do">Future Brand Vision</a></dd>
+                            <dd><a href="https://www.kia.com/worldwide/about_kia/brand/kia_character_enzy.do">Kia Character Enzy</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>Awards</dt>
+                            <dd><a href="https://www.kia.com/worldwide/experience_kia/awards/theme.do">Theme</a></dd>
+                            <dd><a href="https://www.kia.com/worldwide/experience_kia/awards/vehicle_model.do">Vehicle Model</a></dd>
+                            <dd><a href="https://www.kia.com/worldwide/experience_kia/awards/region.do">Region</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>Investor Relations</dt>
+                            <dd><a href="https://www.kia.com/worldwide/about_kia/investor_relations/company_information.do">Company Information</a></dd>
+                            <dd><a href="https://www.kia.com/worldwide/about_kia/investor_relations/financial_highlights.do">Financial Highlights</a></dd>
+                            <dd><a href="https://www.kia.com/worldwide/about_kia/investor_relations/financial_graphs.do">Financial Graphs</a></dd>
+                            <dd><a href="https://www.kia.com/worldwide/about_kia/investor_relations/annual_report.do">Annual Report</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>CSR</dt>
+                            <dd><a href="https://www.kia.com/worldwide/about_kia/csr/about_csr.do">About CSR</a></dd>
+                            <dd><a href="https://www.kia.com/worldwide/about_kia/csr/social_responsibility.do">Social Responsibility</a></dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+            <a href="https://www.kia.com/worldwide/main.do" class="tit_logo"><img src="https://www.kia.com/worldwide/images/img_logo2.png" width="177" height="60" alt="KIA - The Power to Surprise"></a>
+        </div>
+
+    </div>
+    
+    <div class="layer_dimmed"></div>
+</div>
+
+</body>
+</html>
