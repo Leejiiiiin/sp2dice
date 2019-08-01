@@ -40,7 +40,6 @@ $(function(){
 			scrollEvent = true;
 
 			if(wheelDelta > 0){//up
-				
 				sectionCount--;
 				if(sectionCount <= 0){
 					sectionCount = 0;
@@ -54,6 +53,7 @@ $(function(){
 			}
 			
 			if(sectionCount == 2){
+				scrollEvent == false;
 				sec3Sequence();
 			}
 			
@@ -64,31 +64,21 @@ $(function(){
 	}
 
 	//주사위 움직이기
-	var diceIntervalCheck = false;
-	function animateValue(start, end, duration){ // 11, 20, 1s
-		var range = end - start; //9
-		var current = start; // 1
+	function animateValue(start, end, duration){
+		var range = end - start;
+		var current = start;
 		var increment = end > start? 1 : -1;
-		var stepTime = Math.abs(Math.floor(duration / range)); // 1000 / 9
-
-
+		var stepTime = Math.abs(Math.floor(duration / range));
 
 		var timer = setInterval(function(){
 			current += increment;
 			diceCnt = current;
 			if (current == end) {
 				clearInterval(timer);
-				diceIntervalCheck = false;
+				scrollEvent = false;
 			}
 			$('.sec3 img').attr('src', './images/dice_' + diceCnt + '.png');
-			
-			// sec3EventCheck = false;
-			scrollEvent = false;
-			// console.log(current);
 		}, stepTime);
-
-		// return false;
-
 	}
 
 
@@ -97,59 +87,39 @@ $(function(){
 		wrap.off('mousewheel DOMMouseWheel');
 
 		$('.sec3').on('mousewheel DOMMouseWheel', function(e){
-			// e.preventDefault();
 			if(sec3EventCheck == true){
 				if(scrollEvent == false){
-					scrollEvent = true;
 					var sec3delta = e.originalEvent.wheelDelta;
 					var sec3UpCheck = sec3Cnt <= 0 && sec3delta > 0;
 					var sec3DownCheck = sec3Cnt >= 6 && sec3delta < 0;
 
-					if(sec3delta > 0){//up
-						sec3Cnt--;
-						if(sec3Cnt <= 0){
-							sec3Cnt = 0;
-						}
-
-						if(diceIntervalCheck == false){
-							diceIntervalCheck = true;
+					if(sec3UpCheck == false && sec3DownCheck == false){
+						scrollEvent = true;
+						if(sec3delta > 0){//up
+							sec3Cnt--;
+							if(sec3Cnt <= 0){
+								sec3Cnt = 0;
+							}
 							animateValue((sec3Cnt+1)*10, Number(sec3Cnt + '1'), 1000);
-						}
-
-						// console.log((sec3Cnt+1)*10, Number(sec3Cnt + '1'), diceCnt);
-						
-					}else{//down
-						sec3Cnt++; //2
-
-						if(sec3Cnt >= 0 && sec3Cnt <= 5){
-							if(sec3Cnt == 1){
-								if(diceIntervalCheck == false){
-									diceIntervalCheck = true;
+						}else{//down
+							
+							if(sec3Cnt >= 0 && sec3Cnt <= 5){
+								sec3Cnt++;
+								if(sec3Cnt == 1){
 									animateValue(sec3Cnt, sec3Cnt*10, 1000);
-								}
-							}else{
-								if(diceIntervalCheck == false){
-									diceIntervalCheck = true;
+								}else{
 									animateValue(Number((sec3Cnt-1) + '1'), sec3Cnt*10, 1000);
 								}
 							}
-						}else if(sec3Cnt >= 6){
+						}
+					}else{
+						if(sec3UpCheck || sec3DownCheck){
+							scrollEvent = false;
 							wrap.on('mousewheel DOMMouseScroll', wheelEvent);
 						}
 					}
-
-					if(sec3UpCheck || sec3DownCheck){
-						sec3EventCheck = false;
-						wrap.on('mousewheel DOMMouseScroll', wheelEvent);
-						// console.log(sec3UpCheck, sec3DownCheck, sec3EventCheck);
-					}
-					
 				}
-				
-
 			}
-			
-			// console.log(sec3Cnt);
 		});
 	}
 });
