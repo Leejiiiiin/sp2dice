@@ -85,7 +85,6 @@ $(function(){
 	//section3 sequence
 	function sec3Sequence(){
 		wrap.off('mousewheel DOMMouseWheel');
-
 		$('.sec3').on('mousewheel DOMMouseWheel', function(e){
 			if(sec3EventCheck == true){
 				if(scrollEvent == false){
